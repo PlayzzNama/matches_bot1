@@ -33,9 +33,10 @@ subscribe_keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
 # 🎮 Клавіатура трансляцій
 match_keyboard = InlineKeyboardMarkup(inline_keyboard=[
-    [InlineKeyboardButton(text="Полісся - Фіорентінат", callback_data="match1")],
-    [InlineKeyboardButton(text="Шахтар - Серветтен", callback_data="match2")],
-    [InlineKeyboardButton(text="Динамо Київ - Маккабі", callback_data="match3")]
+    [InlineKeyboardButton(text="Вест Гем - Челсі", callback_data="match1")],
+    [InlineKeyboardButton(text="Баварія - РБ Лейпциг", callback_data="match2")],
+    [InlineKeyboardButton(text="Бетіс - Алавес", callback_data="match3")],
+    [InlineKeyboardButton(text="ПСЖ - Анже", callback_data="match4")]
 ])
 
 # 🚀 Старт
@@ -65,9 +66,10 @@ async def match_handler(callback: CallbackQuery):
     await callback.message.delete()  # 🧹 Видаляємо повідомлення з вибором матчів
 
     match_data = {
-        "match1": "🏟 <b>🇺🇦Полісся - Фіорентінат🇮🇹</b>\n🕘 21:00\n📍 Прип'ять, Futbal Tatran Arena",
-        "match2": "🏟 <b>🇺🇦Шахтар - Серветтен🇨🇭</b>\n🕘 21:00\n📍 Харків, Стадіон 'Віца'",
-        "match3": "🏟 <b>🇺🇦Динамо Київ - Маккабі🇮🇱</b>\n🕘 21:00\n📍 Баскет-Тополя, TSC Arena"
+        "match1": "🏟 <b>Вест Гем - Челсі</b>\n🕘 21:00\n📍 Прип'ять, Futbal Tatran Arena",
+        "match2": "🏟 <b>Баварія - РБ Лейпциг</b>\n🕘 21:00\n📍 Харків, Стадіон 'Віца'",
+        "match3": "🏟 <b>Бетіс - Алавес</b>\n🕘 21:00\n📍 Баскет-Тополя, TSC Arena",
+        "match4": "🏟 <b>ПСЖ - Анже</b>\n🕘 21:00\n📍 Баскет-Тополя, TSC Arena",
     }
 
     stream_keyboard = InlineKeyboardMarkup(inline_keyboard=[
